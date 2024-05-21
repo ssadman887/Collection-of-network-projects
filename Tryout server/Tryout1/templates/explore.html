@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/explore.css') }}"
+{% endblock %}
+{% block body %}
+<div class="navbar">
+    <div class="logo">
+        <div class="logo-des"></div>
+        <div class="logo-text-style nav-logo-text-pos"><span style="color: #333156;">S</span>PACE</div>
+    </div>
+    <form action="/home" method="POST" class="nav-link">
+        <button name="upload" class="nav-link-btn">Upload</button>
+        <button name="explore" class="nav-link-btn">Explore</button>
+        <button name="login" class="nav-link-btn">
+            {% if username != '' %}
+                {{ username }}
+            {% else %}
+                Login
+            {% endif %}
+        </button>
+    </form>
+</div>
+<div class="content">
+    <div class="folder-explorer">
+        <div class="folder-explorer-header">Folders</div>
+        <form class="folder-explorer-body">
+            <ul style="list-style: none;">
+                {% for folder in folders %}
+                    <li>
+                        <button name={{ folder}} class="folder-explorer-body-list-item">{{ folder }}</button>
+                        <span class="arrow-right"></span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </form>
+
+    </div>
+    <div style="width: 100%;">
+        <table class="file-explorer-table">
+            <thead>
+                <tr>
+                    {% for row in tableheaders %}
+                        <th class="table-header-text">{{ row.header }}</th>
+                    {% endfor %}
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for file in files %}
+                    <tr>
+                        {% for row in tableheaders %}
+                            <td class="table-body-text">{{ file[row.value] }}</td>
+                        {% endfor %}
+                        <td style="width: 75px;">
+                            <form action="/explore" method="GET">
+                                <button name="downloadfile" value={{ loop.index }} class="circle-icon-btn"><i class="fa fa-download" style="color: white;"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

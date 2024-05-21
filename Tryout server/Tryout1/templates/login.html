@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}"
+
+{% endblock %}
+{% block body %}
+
+<div>
+    <div class="navbar">
+        <div class="logo">
+            <div class="logo-des"></div>
+            <div class="logo-text-style nav-logo-text-pos"><span style="color: #333156;">S</span>PACE</div>
+        </div>
+    </div>
+
+    <form action="/login" method="POST" class="login-form" >
+        <div class="head">LOGIN</div>
+        <input type="text" name="username" class="login-form-field" placeholder="Username">
+        <div>
+            <input type="password" name="password" class="login-form-field" placeholder="Password">
+            <span class="sign-up">Don't have and account? &nbsp <a href="/register">sign up</a>.</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            {% if invalidCredentials == True %}
+            <span style="color: red;">Invalid Credentials</span>
+            {% endif %}
+            <button type="submit" class="login-form-search-button">Sign In</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

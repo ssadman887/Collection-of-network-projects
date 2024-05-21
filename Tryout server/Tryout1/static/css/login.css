@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    /* position: relative;
+    width: 100vw;
+    height: 100vh; */
+    
+    background: #22335F;
+}
+
+.logo {
+    position: absolute;
+    width: fit-content;
+    /* height: 100px; */
+}
+
+.logo .logo-text {
+    position: absolute;
+    /* height: 100px; */
+    
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 61px;
+    /* line-height: 76px; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+    /* color: #333156; */
+}
+
+.logo .logo-des {
+    position: absolute;
+    width: 51px;
+    height: 49px;
+    
+    background: #91B5D9;
+    opacity: 0.36;
+}
+
+.navbar {
+    /* position: absolute; */
+    width: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+ 
+    padding: 0 100px;
+
+    background: #44668C;
+}
+
+.logo-text-style {
+
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 61px;
+    line-height: 76px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: white;
+}
+
+.nav-logo-text-pos {
+    position: absolute;
+    height: 100px;
+}
+
+.logo-des {
+    position: absolute;
+    width: 51px;
+    height: 49px;
+    /* left: 125px; */
+    top: 26px;
+    
+    background: #91B5D9;
+    opacity: 0.36;
+}
+
+.login-form {
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 80px 31px 120px 31px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    align-items: center;
+
+    background: #463A84;
+    border-radius: 30px;
+    
+}
+
+.login-form .head {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+.login-form-field {
+    /* position: absolute; */
+    width: 402px;
+    height: 57px;
+
+    border: none;
+    padding: 0px;    
+    
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+    
+    background: #44668C;
+    border-radius: 28px;
+}
+.login-form-field:focus {
+    outline: none;
+}
+.login-form-field::placeholder {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 0.36);
+}
+.login-form-field:focus::placeholder {
+    color: transparent;
+}
+
+.login-form-search-button {
+    width: 193px;
+    height: 56px;
+    background: #91B5D9;
+    border-radius: 28px;
+    border: none;
+    text-align: center;
+    vertical-align: center;
+    padding: 0;
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #463A84;
+
+    z-index: 1;
+}
+
+.sign-up {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    
+    color: #FFFFFF;
+}
+
+.sign-up a{
+    color: #91B5D9;
+}

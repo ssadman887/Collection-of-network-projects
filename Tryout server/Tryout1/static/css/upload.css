@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+    background: #22335F;
+}
+
+.navbar {
+    /* position: absolute; */
+    width: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+ 
+    padding: 0 100px;
+
+    background: #44668C;
+}
+
+.navbar .logo-text-style {
+
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 61px;
+    line-height: 76px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: white;
+}
+
+.nav-logo-text-pos {
+    position: absolute;
+    height: 100px;
+}
+
+.navbar .logo-des {
+    position: absolute;
+    width: 51px;
+    height: 49px;
+    /* left: 125px; */
+    top: 26px;
+    
+    background: #91B5D9;
+    opacity: 0.36;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 43px;
+    
+    position: absolute;
+    /* width: 160px; */
+    height: 25px;
+    margin-right: 100px;
+    right: 0px;
+    top: 38px;
+}
+
+.nav-link-btn {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #FFFFFF;
+    background-color: transparent;
+    border: none;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 19px;
+    
+    position: absolute;
+    /* width: 687px;
+    top: 307px; */
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 15px;
+/*     
+    width: 475px;
+    height: 60px; */
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.hero-text .hero-text-text {
+    /* width: 265px; */
+    height: 60px;
+    
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.hero-text .logo-text-style {
+    
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+.hero-text .logo-des {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    /* left: 280px;
+    top: 10px; */
+    
+    background: #91B5D9;
+    opacity: 0.36;
+
+    z-index: -1;
+}
+
+.dropzone {
+    width: 687px;
+    height: 212px;
+    
+    background: #463A84;
+    border-radius: 28px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+    display: flex;
+    justify-content: center;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    align-items: center;
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.36);
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 39px 0px 30px;
+    gap: 50px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.rounded-long-button {
+    width: 193px;
+    height: 56px;
+    left: 121px;
+    top: 0px;
+    
+    background: #91B5D9;
+    border-radius: 28px;
+    border: 0px;
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+
+    color: #463A84;
+
+}
+
+.toast {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 49px;
+    gap: 10px;
+    
+    position: absolute;
+    width: 258px;
+    height: 73px;
+    right: 20px;
+    top: 120px;
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+
+    color: #FFFFFF;
+    
+    background: #463A84;
+    border-radius: 24px;
+}
+@keyframes fade-out {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+    }
+.fade-out {
+    animation-name: fade-out;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+ }

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}"
+
+{% endblock %}
+{% block body %}
+
+<div>
+    <div class="navbar">
+        <div class="logo">
+            <div class="logo-des"></div>
+            <div class="logo-text-style nav-logo-text-pos"><span style="color: #333156;">S</span>PACE</div>
+        </div>
+    </div>
+
+    <form action="/register" method="POST" class="login-form" >
+        <div class="head">RESISTER</div>
+        <input type="text" name="email" class="login-form-field" placeholder="e-mail">
+        <input type="text" name="username" class="login-form-field" placeholder="Username">
+        <input type="password" name="password" class="login-form-field" placeholder="Password">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            {% if usernameTaken == True %}
+            <span style="color: red;">Username Taken</span>
+            {% endif %}
+            <button type="submit" class="login-form-search-button">Register</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

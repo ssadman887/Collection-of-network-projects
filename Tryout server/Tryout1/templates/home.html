@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}"
+
+{% endblock %}
+{% block body %}
+
+<div class="navbar">
+    <div class="logo">
+        <div class="logo-des"></div>
+        <div class="logo-text-style nav-logo-text-pos"><span style="color: #333156;">S</span>PACE</div>
+    </div>
+    <form action="/home" method="POST" class="nav-link">
+        <button name="upload" class="nav-link-btn">Upload</button>
+        <button name="explore" class="nav-link-btn">Explore</button>
+        <button name="login" class="nav-link-btn">
+            {% if username != '' %}
+                {{ username }}
+            {% else %}
+                Login
+            {% endif %}
+        </button>
+    </form>
+</div>
+
+<div class="hero">
+    <div class="hero-body">
+        <span class="hero-body-text">FIND IN</span>
+        <span class="hero-body-logo">
+            <div class="logo">
+                <div class="logo-des"></div>
+                <div class="logo-text"><span style="color: #333156;">S</span>PACE</div>
+            </div>
+        </span>
+    </div>
+    <form action="/home" method="POST" class="hero-search">
+        <button type="submit" name="search" class="hero-search-button">SEARCH</button>
+        <input type="text" name="search_file_name" id="search_file_name" class="hero-search-box" placeholder="Search Files in Space">
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}"
+{% endblock %}
+
+{% block body %}
+<div class="navbar">
+    <div class="logo">
+        <div class="logo-des"></div>
+        <div class="logo-text-style nav-logo-text-pos"><span style="color: #333156;">S</span>PACE</div>
+    </div>
+    <form action="/home" method="POST" class="nav-link">
+        <button name="upload" class="nav-link-btn">Upload</button>
+        <button name="explore" class="nav-link-btn">Explore</button>
+        <button name="login" class="nav-link-btn">
+            {% if username != '' %}
+                {{ username }}
+            {% else %}
+                Login
+            {% endif %}
+        </button>
+    </form>
+</div>
+
+<form action="/upload" method="POST" enctype="multipart/form-data" class="hero">
+    <div class="hero-text">
+        <div class="hero-text-text">STORE IN</div>
+        <div class="logo-text-style">
+            <div class="logo-des"></div>
+            <span style="color: #333156;">S</span>PACE
+        </div>
+    </div>
+    
+    <div>
+        <input id="upload_file" name="upload_file" type="file" style="display: none;" label="upload_file_label">
+        <label for="upload_file" id="upload_file_label" class="dropzone">
+            Upload Files<br>
+            Drag and Drop Files or Click
+        </label>
+    </div>
+
+    <div class="btn-group">
+        <button name="upload_user" class="rounded-long-button">Upload</button>
+        <button name="upload_public" class="rounded-long-button">Upload to Public</button>
+    </div>
+
+</form>
+
+{% if uploadSuccess is defined %}
+    <div class="toast fade-out fadeOut">Upload Successful</div>
+{% endif %}
+
+{% endblock %}
